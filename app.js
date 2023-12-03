@@ -1,4 +1,5 @@
 // app.js
+require("dotenv").config()
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -89,7 +90,5 @@ app.post('/edit/:collectionName', async (req, res) => {
     }
 });
 
-app.listen(3000, '0.0.0.0', () => {
-    console.log('Server is running on port 3000');
-});
+app.listen(process.env.PORT);
 
