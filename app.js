@@ -5,7 +5,7 @@ const path = require('path');
 const { MongoClient } = require('mongodb');
 const ejs = require('ejs');
 
-const uri = "mongodb+srv://admin:passwordnebula@nebuladb.d7wj5do.mongodb.net/test"; // Update with your MongoDB connection string
+const uri = "mongodb://admin:<password>@ac-9nniov2-shard-00-00.d7wj5do.mongodb.net:27017,ac-9nniov2-shard-00-01.d7wj5do.mongodb.net:27017,ac-9nniov2-shard-00-02.d7wj5do.mongodb.net:27017/?ssl=true&replicaSet=atlas-ujy48v-shard-0&authSource=admin&retryWrites=true&w=majority"; // Update with your MongoDB connection string
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 app.set('view engine', 'ejs');
