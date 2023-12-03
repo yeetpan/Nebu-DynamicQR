@@ -37,7 +37,7 @@ app.post('/submit', async (req, res) => {
         const collection = client.db().collection(data.collectionName);
         await collection.insertOne(data);
 
-        res.redirect(`/display/${data.collectionName}`);
+        res.redirect(`../display/${data.collectionName}`);
     } finally {
         await client.close();
     }
